@@ -1,0 +1,40 @@
+/* ── CSS Variables ── */
+:root {
+  --gold: #C8860A;
+  --gold-light: #e09d20;
+  --cream: #FDFAF3;
+  --cream-dark: #F5F0E8;
+  --dark: #2C2C2C;
+  --gray: #777;
+  --gray-light: #aaa;
+  --font-serif: 'Georgia', serif;
+  --max-width: 1100px;
+  --section-pad: 70px 40px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-serif); background: var(--cream); color: var(--dark); }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { display: block; width: 100%; object-fit: cover; }
+button { font-family: var(--font-serif); cursor: pointer; }
+
+/* ── Utilities ── */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
+.section-pad { padding: var(--section-pad); }
+.text-gold { color: var(--gold); }
+.text-gray { color: var(--gray); }
+
+/* ── Btn Outline Gold ── */
+.btn-outline-gold {
+  padding: 12px 30px;
+  border: 1.5px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-size: 13px;
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-outline-gold:hover { background: var(--gold); color: #fff; }

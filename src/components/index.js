@@ -1,0 +1,11 @@
+export { default as Navbar } from './Navbar';
+export { default as Hero } from './Hero';
+export { default as FindUs } from './FindUs';
+export { default as Achievements } from './Achievements';
+export { default as StatCard } from './StatCard';
+export { default as Testimonials } from './Testimonials';
+export { default as TestimonialCard } from './TestimonialCard';
+export { default as Projects } from './Projects';
+export { default as ProjectCard } from './ProjectCard';
+export { default as CTA } from './CTA';
+export { default as Footer } from './Footer';

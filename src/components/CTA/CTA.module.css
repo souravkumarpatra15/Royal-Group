@@ -1,0 +1,13 @@
+.section {
+  padding: 80px 40px;
+  text-align: center;
+  background: #FDFAF3;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+
+.gold { color: #C8860A; }

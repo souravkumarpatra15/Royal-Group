@@ -1,0 +1,62 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 60px;
+  padding-top: 15px;
+
+  /* Gradient background */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+
+  backdrop-filter: blur(8px);
+
+  z-index: 1000;
+
+  transition: all 0.3s ease;
+}
+
+/* When scroll */
+.scrolled {
+  backdrop-filter: blur(12px);
+}
+
+/* Logo */
+.logoImage {
+  height: 70px;
+  transition: 0.3s;
+}
+
+.scrolled .logoImage {
+  height: 65px;
+}
+
+/* Nav links */
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navLink:hover {
+  color: #DA7422;
+}

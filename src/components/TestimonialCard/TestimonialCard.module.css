@@ -1,0 +1,30 @@
+.card {
+  padding: 18px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.active {
+  background: #fff;
+  border-left-color: #C8860A;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.stars { display: flex; gap: 3px; margin-bottom: 6px; }
+.starFilled { color: #C8860A; font-size: 13px; }
+.starEmpty { color: #ddd; font-size: 13px; }
+
+.name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #C8860A;
+  margin-bottom: 6px;
+}
+
+.text {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.7;
+}
