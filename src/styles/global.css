@@ -2,8 +2,8 @@
 :root {
   --gold: #C8860A;
   --gold-light: #e09d20;
-  --cream: #FDFAF3;
-  --cream-dark: #F5F0E8;
+  --cream: #FFFBDB;
+  --cream-dark: #F5F0C8; 
   --dark: #2C2C2C;
   --gray: #777;
   --gray-light: #aaa;
@@ -14,7 +14,7 @@
 
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: var(--font-serif); background: var(--cream); color: var(--dark); }
+body { font-family: var(--font-serif); background: #FFFBDB; color: var(--dark); }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { display: block; width: 100%; object-fit: cover; }

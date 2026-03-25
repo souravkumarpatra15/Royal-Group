@@ -1,48 +1,165 @@
-.section { padding: 70px 0; }
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.heading {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 24px;
-  line-height: 1.3;
-}
-
-.locationName {
-  color: #C8860A;
-  font-size: 16px;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.desc {
-  color: #555;
-  font-size: 13.5px;
-  line-height: 1.8;
-  margin-bottom: 24px;
-}
-
-.mapCol {
-  border-radius: 8px;
+/* ── Section ── */
+.section {
+  position: relative;
+  width: 100%;
+  height: 680px;
   overflow: hidden;
-  height: 320px;
+  background: #FFFBDB;
+}
+
+/* Map fills entire section */
+.mapBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .mapImg {
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
-.mapPlaceholder {
-  width: 100%; height: 100%;
-  background: #e8e0d0;
+/* ── TOP gradient fade ── */
+.mapBg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 130px;
+  background: linear-gradient(to bottom, #FFFBDB 0%, rgba(255,251,219,0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ── BOTTOM gradient fade ── */
+.mapBg::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 130px;
+  background: linear-gradient(to top, #FFFBDB 0%, rgba(255,251,219,0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ── RIGHT gradient fade ── */
+.mapRightFade {
+  position: absolute;
+  top: 0; right: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(to left, #FFFBDB 0%, rgba(255,251,219,0) 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ── Left text overlay ── */
+.textOverlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 500px;
+  height: 100%;
+  padding: 52px 40px 52px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  background: linear-gradient(
+    to right,
+    #FFFBDB         0%,
+    #FFFBDB         42%,
+    rgba(255,251,219,0.82) 68%,
+    rgba(255,251,219,0.0)  100%
+  );
+}
+
+/* Heading */
+.heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #1A1610;
+  line-height: 1.18;
+  margin-bottom: 22px;
+}
+
+/* 2×2 pin grid */
+.pinGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  margin-bottom: 18px;
+}
+
+.pinItem {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #D4821A;
+}
+
+.pinItem svg { flex-shrink: 0; }
+
+/* Description */
+.desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  color: #555;
+  line-height: 1.82;
+  margin-bottom: 26px;
+  max-width: 400px;
+}
+
+/* ── See More button — white pill with left-to-right hover sweep ── */
+.seeMoreBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  padding: 12px 0;
+  border: none;
+  background: #FFFFFF;
+  color: #C8860A;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;           /* clips the sweep inside the pill */
+  box-shadow:
+    0px 4px 16px rgba(0, 0, 0, 0.10),
+    0px 1px 4px  rgba(0, 0, 0, 0.07);
+  transition: color 0.35s ease, box-shadow 0.35s ease;
+  z-index: 0;
+}
+
+/* The gold fill that sweeps left → right on hover */
+.seeMoreBtn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: #C8860A;
+  border-radius: 20px;
+  transform: translateX(-100%);         /* starts fully off-screen left */
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+.seeMoreBtn:hover::before {
+  transform: translateX(0);             /* sweeps in from left to right */
+}
+
+.seeMoreBtn:hover {
+  color: #ffffff;
+  box-shadow:
+    0px 6px 22px rgba(200, 134, 10, 0.28),
+    0px 2px 6px  rgba(200, 134, 10, 0.14);
 }

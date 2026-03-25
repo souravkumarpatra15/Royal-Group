@@ -1,11 +1,19 @@
-export const NAV_LINKS = ["About Us", "Join Us", "Our Ecosystem"];
+import Rectangle1 from '../assets/Rectangle 8.png';
+import Rectangle2 from '../assets/Rectangle 33.png';
+import Rectangle3 from '../assets/Rectangle 34.png';
+import Rectangle4 from '../assets/Rectangle 35.png';
+
+export const NAV_LINKS = ["Home", "About Us", "Contact Us", "Our Ecosystem"];
 
 export const STATS = [
   { value: "2M+", label: "Sq.Ft. Developed" },
   { value: "2,800+", label: "Homes Delivered" },
+  { value: "9+", label: "Ready to Move Project" },
   { value: "18+", label: "Years of Experience" },
   { value: "9+", label: "Upcoming Projects" },
 ];
+
+export const BUILDING_IMAGES = [Rectangle1, Rectangle2, Rectangle3, Rectangle4];
 
 export const TESTIMONIALS = [
   {

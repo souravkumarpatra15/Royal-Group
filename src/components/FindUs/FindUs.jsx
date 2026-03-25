@@ -1,49 +1,45 @@
 import styles from './FindUs.module.css';
 import { LOCATIONS } from '../../data';
+import mapImg from '../../assets/kolkata-map.png';
 
-/**
- * FindUs Props:
- * - locations: array of { name, description, city }
- * - mapImage: string (URL to map image) — falls back to SVG
- */
-export default function FindUs({ locations = LOCATIONS, mapImage = null }) {
-  const location = locations[0];
-
+export default function FindUs({ locations = LOCATIONS, mapImage = mapImg }) {
   return (
     <section className={styles.section}>
-      <div className={styles.container}>
-        {/* Text */}
-        <div className={styles.textCol}>
-          <h2 className={styles.heading}>
-            Where Can You<br />Find Us
-          </h2>
-          <h3 className={styles.locationName}>{location.name}</h3>
-          <p className={styles.desc}>{location.description}</p>
-          <button className="btn-outline-gold">See More...</button>
+
+      {/* Map fills full background — ::before top fade, ::after bottom fade via CSS */}
+      <div className={styles.mapBg}>
+        <img src={mapImage} alt="Kolkata Map" className={styles.mapImg} />
+      </div>
+
+      {/* Right edge fade */}
+      <div className={styles.mapRightFade} />
+
+      {/* Text overlay — left side */}
+      <div className={styles.textOverlay}>
+        <h2 className={styles.heading}>Building Our<br />Legacy</h2>
+
+        <div className={styles.pinGrid}>
+          {['Hooghly', 'Rajarhat', 'Howrah', 'Sonarpur'].map(label => (
+            <span key={label} className={styles.pinItem}>
+              <svg width="13" height="17" viewBox="0 0 14 19" fill="none" aria-hidden="true">
+                <path d="M7 0C3.134 0 0 3.358 0 7.5 0 13.125 7 19 7 19S14 13.125 14 7.5C14 3.358 10.866 0 7 0z" fill="#D4821A"/>
+                <circle cx="7" cy="7.5" r="2.8" fill="#fff"/>
+              </svg>
+              {label}
+            </span>
+          ))}
         </div>
 
-        {/* Map */}
-        <div className={styles.mapCol}>
-          {mapImage ? (
-            <img src={mapImage} alt="Location Map" className={styles.mapImg} />
-          ) : (
-            <div className={styles.mapPlaceholder}>
-              <svg width="100%" height="100%" viewBox="0 0 400 300">
-                <rect width="400" height="300" fill="#e8dfc8"/>
-                <path d="M 80 0 Q 100 80 90 150 Q 80 220 100 300" stroke="#a8c4d0" strokeWidth="24" fill="none" opacity="0.7"/>
-                <line x1="100" y1="150" x2="350" y2="150" stroke="#fff" strokeWidth="3" opacity="0.8"/>
-                <line x1="200" y1="50" x2="200" y2="280" stroke="#fff" strokeWidth="2.5" opacity="0.7"/>
-                <line x1="100" y1="200" x2="380" y2="180" stroke="#fff" strokeWidth="2" opacity="0.6"/>
-                <line x1="150" y1="80" x2="380" y2="100" stroke="#fff" strokeWidth="2" opacity="0.6"/>
-                <circle cx="210" cy="200" r="10" fill="#C8860A"/>
-                <circle cx="210" cy="200" r="5" fill="#fff"/>
-                <text x="230" y="145" fill="#333" fontSize="14" fontWeight="bold">Kolkata</text>
-                <text x="228" y="160" fill="#333" fontSize="10" opacity="0.7">কলকাতা</text>
-              </svg>
-            </div>
-          )}
-        </div>
+        <p className={styles.desc}>
+          SK Group proudly operates across key locations including Hooghly,
+          Howrah, Rajarhat, and Sonarpur. With a strong local presence in these
+          regions, we deliver trusted construction solutions backed by quality,
+          precision, and commitment.
+        </p>
+
+        <button className={styles.seeMoreBtn}>See More...</button>
       </div>
+
     </section>
   );
 }
