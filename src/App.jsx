@@ -15,8 +15,8 @@ export default function App() {
       <Hero />
       <FindUs />
       <Achievements />
-      <Testimonials />
       <Projects />
+      <Testimonials />
       <CTA onButtonClick={() => alert('Contact form coming soon!')} />
       <Footer />
     </>

@@ -1,27 +1,34 @@
 import styles from './TestimonialCard.module.css';
 
-/**
- * TestimonialCard Props:
- * - name: string
- * - stars: number (1-5)
- * - text: string
- * - active: boolean
- * - onClick: function
- */
-export default function TestimonialCard({ name, stars = 3, text, active = false, onClick }) {
+export default function TestimonialCard({
+  name,
+  text,
+  active = false,
+  onClick,
+}) {
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onClick?.();
+    }
+  };
+
   return (
     <div
       className={`${styles.card} ${active ? styles.active : ''}`}
       onClick={onClick}
       role="button"
       tabIndex={0}
+      aria-pressed={active}
+      onKeyDown={handleKeyDown}
     >
-      <div className={styles.stars}>
-        {[1,2,3,4,5].map(i => (
-          <span key={i} className={i <= stars ? styles.starFilled : styles.starEmpty}>▲</span>
-        ))}
-      </div>
+      {/* Quote */}
+      <div className={styles.quote}>“</div>
+
+      {/* Name */}
       <div className={styles.name}>{name}</div>
+
+      {/* Text */}
       <p className={styles.text}>{text}</p>
     </div>
   );

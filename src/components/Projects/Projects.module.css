@@ -1,30 +1,86 @@
-.section { padding: 70px 0; }
+.section {
+  padding: 70px 0;
+  overflow: hidden;
+}
 
+/* Heading + filter label stay inside the normal container */
 .container {
-  max-width: 1100px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
 .filter {
   font-size: 12px;
-  color: #C8860A;
+  color: #DA7422;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 8px;
 }
 
 .heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 40px;
+  font-weight: 700;
+  color: #1A1610;
+  margin-bottom: 36px;
   line-height: 1.3;
 }
 
-.gold { color: #C8860A; font-style: italic; }
+.gold {
+  color: #DA7422;
+  font-style: italic;
+}
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* ── Scroll container ── */
+.scrollOuter {
+  position: relative;          /* for the fade overlay */
+  margin-left: 40px;          /* aligns with heading left edge */
+}
+
+.track {
+  display: flex;
   gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 40px;         /* breathing room at end */
+  padding-bottom: 12px;        /* room for scrollbar if visible */
+
+  /* Hide scrollbar on all browsers */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Right fade hint — shows cards continue ── */
+.fadeRight {
+  position: absolute;
+  top: 0; right: 0;
+  width: 120px;
+  height: calc(100% - 12px);   /* exclude scrollbar padding */
+  background: linear-gradient(
+    to left,
+    #FFFBDB 0%,
+    rgba(255, 251, 219, 0) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.fadeLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: calc(100% - 12px); /* exclude scrollbar padding */
+  background: linear-gradient(
+    to right,
+    #FFFBDB 0%,
+    rgba(255, 251, 219, 0) 20%
+  );
+  pointer-events: none;
+  z-index: 2;
 }

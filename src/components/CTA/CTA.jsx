@@ -1,12 +1,6 @@
 import styles from './CTA.module.css';
+import logo from '../../assets/logo.png';
 
-/**
- * CTA Props:
- * - title: string
- * - highlight: string (gold word)
- * - buttonText: string
- * - onButtonClick: function
- */
 export default function CTA({
   title = "Looking For The Right",
   highlight = "Property?",
@@ -15,12 +9,21 @@ export default function CTA({
 }) {
   return (
     <section className={styles.section}>
-      <h2 className={styles.heading}>
-        {title} <span className={styles.gold}>{highlight}</span>
-      </h2>
-      <button className="btn-outline-gold" onClick={onButtonClick}>
-        {buttonText}
-      </button>
+
+      {/* Watermark logo in background */}
+      <div className={styles.watermark}>
+        <img src={logo} alt="" aria-hidden="true" className={styles.watermarkImg} />
+      </div>
+
+      <div className={styles.content}>
+        <h2 className={styles.heading}>
+          {title} <span className={styles.gold}>{highlight}</span>
+        </h2>
+        <button className={styles.btn} onClick={onButtonClick}>
+          {buttonText}
+        </button>
+      </div>
+
     </section>
   );
 }

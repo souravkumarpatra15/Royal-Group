@@ -1,30 +1,63 @@
 .card {
-  padding: 18px 20px;
-  border-radius: 6px;
+  height: 130px; /* IMPORTANT: must match JS ITEM_HEIGHT */
+
+  padding: 16px 18px;
+  border-radius: 12px;
   cursor: pointer;
+
+  /* background: #fff; */
   border-left: 3px solid transparent;
-  transition: all 0.2s;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+
+  transform: scale(0.88);
+  opacity: 0.5;
+
+  transition: all 0.35s ease;
 }
 
-.active {
-  background: #fff;
-  border-left-color: #C8860A;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+/* HOVER (only affect non-active) */
+.card:hover:not(.active) {
+  transform: scale(0.92) translateX(4px);
+  opacity: 0.1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
 }
 
-.stars { display: flex; gap: 3px; margin-bottom: 6px; }
-.starFilled { color: #C8860A; font-size: 13px; }
-.starEmpty { color: #ddd; font-size: 13px; }
+/* ACTIVE (center card) */
+.card.active {
+  transform: scale(1);
+  opacity: 1;
 
+  border-left: 3px solid #C8860A;
+
+  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+}
+
+/* QUOTE */
+.quote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #C8860A;
+
+  line-height: 0.8;
+  margin-bottom: 6px;
+  letter-spacing: -3px;
+}
+
+/* NAME */
 .name {
-  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
   font-size: 14px;
   color: #C8860A;
   margin-bottom: 6px;
 }
 
+/* TEXT */
 .text {
-  color: #666;
-  font-size: 13px;
-  line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  color: #555;
+  line-height: 1.6;
 }

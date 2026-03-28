@@ -15,24 +15,33 @@ export const STATS = [
 
 export const BUILDING_IMAGES = [Rectangle1, Rectangle2, Rectangle3, Rectangle4];
 
+// Add this to your src/data/index.js — replace the existing TESTIMONIALS export
+
 export const TESTIMONIALS = [
   {
-    name: "Apartment A",
-    stars: 3,
-    text: "Porro ipsam amet ut laudantium rem quibusdam. Praesentium culpa dolores alias et magnam provident harum consequatur consequuntur voluptatem consequatur in haret.",
-    image: null,
+    name: "Rejesh Sharma",
+    stars: 5,
+    text: '"SK Group delivered exactly what they promised — quality construction, timely completion, and complete transparency throughout the process."',
   },
   {
-    name: "Apartment B",
-    stars: 3,
-    text: "Porro ipsam amet ut laudantium rem quibusdam. Praesentium culpa dolores alias et magnam provident harum consequatur consequuntur voluptatem consequatur in haret.",
-    image: null,
+    name: "Priya Banerjee",
+    stars: 5,
+    text: '"Their professionalism and attention to detail truly stand out. The entire experience was smooth and trustworthy."',
   },
   {
-    name: "Apartment C",
-    stars: 3,
-    text: "Porro ipsam amet ut laudantium rem quibusdam. Praesentium culpa dolores alias et magnam provident harum consequatur consequuntur voluptatem consequatur in haret.",
-    image: null,
+    name: "Amit Verma",
+    stars: 5,
+    text: '"From planning to finishing, everything was well-managed. You can clearly see their commitment to long-term quality."',
+  },
+  {
+    name: "Amit Verma",
+    stars: 5,
+    text: '"From planning to finishing, everything was well-managed. You can clearly see their commitment to long-term quality."',
+  },
+  {
+    name: "Amit Verma",
+    stars: 5,
+    text: '"From planning to finishing, everything was well-managed. You can clearly see their commitment to long-term quality."',
   },
 ];
 
@@ -41,22 +50,43 @@ export const PROJECTS = [
     id: 1,
     name: "Apartment A",
     status: "Ongoing",
-    desc: "Find your new home at our greatest project. Experience safety, along with all the amenities that you and your family deserve to have.",
-    image: null,
+    desc: "Potter ipsum wand elf parchment wingardium.",
+    image: Rectangle1,
   },
   {
     id: 2,
     name: "Apartment B",
     status: "Completed",
-    desc: "Find your new home at our greatest project. Experience safety, along with all the amenities that you and your family deserve to have.",
-    image: null,
+    desc: "Potter ipsum wand elf parchment wingardium.",
+    image: Rectangle2,
   },
   {
     id: 3,
     name: "Apartment C",
     status: "Ongoing",
-    desc: "Find your new home at our greatest project. Experience safety, along with all the amenities that you and your family deserve to have.",
-    image: null,
+    desc: "Potter ipsum wand elf parchment wingardium.",
+    image: Rectangle3,
+  },
+  {
+    id: 4,
+    name: "Apartment D",
+    status: "Ongoing",
+    desc: "Potter ipsum wand elf parchment wingardium.",
+    image: Rectangle4,
+  },
+  {
+    id: 5,
+    name: "Apartment E",
+    status: "Completed",
+    desc: "Potter ipsum wand elf parchment wingardium.",
+    image: Rectangle1,
+  },
+  {
+    id: 6,
+    name: "Apartment F",
+    status: "Ongoing",
+    desc: "Potter ipsum wand elf parchment wingardium.",
+    image: Rectangle4,
   },
 ];
 
@@ -74,41 +104,39 @@ export const FOOTER_COLS = [
   {
     title: "Brand & About",
     links: [
-      { label: "Our Story", href: "#" },
-      { label: "Leadership Team", href: "#" },
-      { label: "Awards & Recognition", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Press & Media", href: "#" },
+      {
+        label: "Building trusted residential, commercial, and lifestyle spaces across multiple districts.\n\nWith a strong presence in real estate development, hospitality, and banquets, SK Royal Group focuses on quality construction, transparency, and long-term value.\n\nThe data presented on the website represents approximate figures.",
+        href: "#",
+      },
     ],
   },
   {
-    title: "Ecosystems",
+    title: "Ecosystem",
     links: [
-      { label: "Residential Projects", href: "#" },
-      { label: "Commercial Spaces", href: "#" },
-      { label: "Ongoing Projects", href: "#" },
-      { label: "Design Philosophy", href: "#" },
+      { label: "Residential Properties",  href: "#" },
+      { label: "Commercial Properties",   href: "#" },
+      { label: "Garages / Parking Spaces", href: "#" },
+      { label: "Banquets",                href: "#" },
+      { label: "Hospitality",             href: "#" },
     ],
   },
   {
     title: "Quick Links",
     links: [
-      { label: "Home", href: "#" },
-      { label: "About Us", href: "#" },
-      { label: "Our Projects", href: "#" },
-      { label: "Latest News", href: "#" },
-      { label: "Virtual Property Tour", href: "#" },
-      { label: "Book a Visit", href: "#" },
-      { label: "Contact Us", href: "#" },
+      { label: "About Us",                href: "#" },
+      { label: "Contact Us",              href: "#" },
+      { label: "Ongoing Projects",        href: "#" },
+      { label: "Completed Projects",      href: "#" },
+      { label: "Ready-to-Move Properties", href: "#" },
     ],
   },
   {
     title: "Contact & Enquiry",
     links: [
-      { label: "📍 South Kolkata", href: "#" },
-      { label: "📧 info@company.com", href: "mailto:info@company.com" },
-      { label: "📞 +91 98765 43210", href: "tel:+919876543210" },
-      { label: "Mon–Sat 10am–7pm", href: "#" },
+      { label: "SK Royal Group\n[City / District Name]", href: "#" },
+      { label: "Phone:\n+91 XXXXX XXXXX",               href: "tel:+91XXXXXXXXXX" },
+      { label: "Email:\ninfo@skroyalgroup.com",          href: "mailto:info@skroyalgroup.com" },
+      { label: "Business Hours:\nMon — Sat | 10:00 AM — 6:00 PM", href: "#" },
     ],
   },
 ];
