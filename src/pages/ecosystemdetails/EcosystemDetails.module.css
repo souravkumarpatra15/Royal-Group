@@ -1,0 +1,257 @@
+.page {
+  background: #FFFBDB;
+  min-height: 100vh;
+}
+
+/* ══════════════════════════════════════
+   HERO — 50/50 split
+══════════════════════════════════════ */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 580px;
+  padding-top: 0; /* navbar height */
+}
+
+/* Left — full image */
+.heroLeft {
+  overflow: hidden;
+  position: relative;
+}
+
+.heroImg {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Right — cream background, title + desc */
+.heroRight {
+  background: #FFFBDB;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 100px 64px;
+  gap: 400px;
+}
+
+/* "Our Collection." */
+.heroTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.08;
+  color: #1A1610;
+  margin-bottom: 40px;
+  letter-spacing: -0.01em;
+}
+
+.heroDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  color: #555;
+  line-height: 1.88;
+  max-width: 580px;
+}
+
+/* ══════════════════════════════════════
+   BIG TITLE + TABS
+══════════════════════════════════════ */
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers title + tabs together */
+}
+
+/* Giant overlapping property type title */
+.bigTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.dark  { color: #1A1610; }
+.gold  { color: #DA7422; }
+
+/* Tabs pill container */
+.tabsWrapper {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;
+  width: 100%;
+}
+
+.tabs {
+  display: inline-flex;
+  background: #fff;
+  border-radius: 50px;
+  padding: 5px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  gap: 0;
+}
+
+.tab {
+  padding: 10px 28px;
+  border-radius: 50px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+  white-space: nowrap;
+}
+
+.tabActive {
+  background: #DA7422;
+  color: #fff;
+}
+
+.tabInactive {
+  background: transparent;
+  color: #555;
+}
+
+.tabInactive:hover {
+  color: #DA7422;
+}
+
+/* ══════════════════════════════════════
+   PROJECTS GRID — 3 columns
+══════════════════════════════════════ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0 48px 80px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+/* ── Card base ── */
+.card {
+  background: #fff;
+  border-radius: 0px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.22s, box-shadow 0.22s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  width: 330px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.13);
+}
+
+/* Featured card (2nd card) — darker body like screenshot */
+.cardFeatured {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.14);
+}
+
+/* Card image */
+.cardImgWrap {
+  height: 300px;
+  overflow: hidden;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .cardImg {
+  transform: scale(1.05);
+}
+
+/* Card body */
+.cardBody {
+  padding: 18px 18px 20px;
+  background: #fff;
+}
+
+/* Featured card body — dark background like Figma */
+.cardBody:hover {
+  background: #2C2416;
+}
+
+/* Card title */
+.cardTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #DA7422;
+  margin-bottom: 8px;
+}
+
+.cardBody:hover .cardTitle {
+  color: #E8A040;
+}
+
+/* Card description */
+.cardDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  color: #666;
+  line-height: 1.68;
+  margin-bottom: 12px;
+}
+
+.cardBody:hover .cardDesc {
+  color: rgba(255,255,255,0.65);
+}
+
+/* See More link */
+.seeMore {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  color: #DA7422;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.seeMore:hover {
+  color: #DA7422;
+}
+
+.cardBody:hover .seeMore {
+  color: #E8A040;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .heroLeft {
+    height: 300px;
+  }
+  .heroRight {
+    padding: 40px 24px;
+  }
+  .heroTitle {
+    font-size: 38px;
+  }
+  .bigTitle {
+    font-size: 48px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0 24px 60px;
+  }
+  .titleSection {
+    padding: 0 24px;
+  }
+}

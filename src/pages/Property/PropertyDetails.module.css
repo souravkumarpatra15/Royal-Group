@@ -1,0 +1,90 @@
+.page {
+  background: #0c0c0c;
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 750px;
+}
+
+.heroImg {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), #000);
+}
+
+.heroContent {
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+}
+
+.heroContent h1 {
+  font-size: 48px;
+}
+
+.heroContent span {
+  color: #DA7422;
+}
+
+/* OVERVIEW */
+.overview {
+  display: flex;
+  gap: 60px;
+  padding: 80px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stats h2 {
+  color: #DA7422;
+}
+
+/* GALLERY */
+.galleryGrid {
+  display: flex;
+  gap: 20px;
+  padding: 60px;
+}
+
+.big {
+  width: 70%;
+}
+
+.side {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* AMENITIES */
+.amenities {
+  display: flex;
+  padding: 80px;
+  gap: 60px;
+}
+
+.amenityList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* MORE */
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+}

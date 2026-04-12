@@ -3,7 +3,12 @@ import Rectangle2 from '../assets/Rectangle 33.png';
 import Rectangle3 from '../assets/Rectangle 34.png';
 import Rectangle4 from '../assets/Rectangle 35.png';
 
-export const NAV_LINKS = ["Home", "About Us", "Contact Us", "Our Ecosystem"];
+export const NAV_LINKS = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "Contact Us", path: "/contact" },
+  { name: "Our Ecosystem", path: "/ecosystem" },
+];
 
 export const STATS = [
   { value: "2M+", label: "Sq.Ft. Developed" },
@@ -15,7 +20,6 @@ export const STATS = [
 
 export const BUILDING_IMAGES = [Rectangle1, Rectangle2, Rectangle3, Rectangle4];
 
-// Add this to your src/data/index.js — replace the existing TESTIMONIALS export
 
 export const TESTIMONIALS = [
   {

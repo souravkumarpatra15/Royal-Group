@@ -1,8 +1,10 @@
 import styles from './FindUs.module.css';
 import { LOCATIONS } from '../../data';
 import mapImg from '../../assets/kolkata-map.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function FindUs({ locations = LOCATIONS, mapImage = mapImg }) {
+  const navigate = useNavigate();
   return (
     <section className={styles.section}>
 
@@ -37,7 +39,7 @@ export default function FindUs({ locations = LOCATIONS, mapImage = mapImg }) {
           precision, and commitment.
         </p>
 
-        <button className={styles.seeMoreBtn}>See More...</button>
+        <button className={styles.seeMoreBtn} onClick={() => navigate('/ecosystem')}>See More...</button>
       </div>
 
     </section>
