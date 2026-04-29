@@ -25,7 +25,7 @@ export default function Testimonials({
       <div className={styles.container}>
         <h2 className={styles.heading}>What Our Customer's Say</h2>
         <p className={styles.subheading}>
-          Potter ipsum wand elf parchment wingardium.
+          Sk Royal Connect is an exclusive loyalty initiative for the residents of Srijan Realty, designed to unleash the power of happier communities.
         </p>
 
         <div className={styles.grid}>

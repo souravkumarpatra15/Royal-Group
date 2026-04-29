@@ -20,26 +20,41 @@ export default function Contact() {
             <p style={{ marginTop: '-100px' }}>Say something to start a live chat!</p>
 
             <div className={styles.info}>
-              <a href="tel:+1023456789" className={styles.infoItem}>
+              <a href="tel:+919830279622" className={styles.infoItem}>
                 <FontAwesomeIcon icon={faPhone} />
-                <span>+102 3456 789</span>
+                <span>+91 98302 79622</span>
               </a>
 
-              <a href="mailto:demo@gmail.com" className={styles.infoItem}>
+              <a href="mailto:info@skroyalgroup.com" className={styles.infoItem}>
                 <FontAwesomeIcon icon={faEnvelope} />
-                <span>demo@gmail.com</span>
+                <span>info@skroyalgroup.com</span>
               </a>
 
               <a
-                href="https://www.google.com/maps?q=132+Dartmouth+Street+Boston"
+                href="https://www.google.com/maps?q=16%2F1AM%20Abdul%20Hamid%20(British%20India)%20Street,%20(1st%20Floor)%20,%20Kolkata%20–%20700069"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.infoItem}
               >
                 <FontAwesomeIcon icon={faLocationDot} />
+                Office address:
                 <span>
-                  132 Dartmouth Street Boston,<br />
-                  Massachusetts 02156 United States
+                  16/1AM Abdul Hamid (British India) Street, (1st Floor) , Kolkata – 700069
+                </span>
+              </a>
+              <a
+                href="https://www.google.com/maps?q=16%2F1AM%20Abdul%20Hamid%20(British%20India)%20Street,%20(1st%20Floor)%20,%20Kolkata%20–%20700069"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.infoItem}
+              >
+                <FontAwesomeIcon icon={faLocationDot} />
+                Branch address:
+                <span>
+                  105 B. K. Street, Near Telephone Exchange Uttarpara,
+                  Hooghly – 712258
+                  Tel (O) : 033 2663 6545
+                  Mobile : 98302 79622
                 </span>
               </a>
             </div>
