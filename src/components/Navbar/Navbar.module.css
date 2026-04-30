@@ -70,3 +70,88 @@
   color: #DA7422;
   /* brand orange on hover */
 }
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100vh;
+
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.95),
+      rgba(0, 0, 0, 0.85));
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: right 0.4s ease;
+  z-index: 999;
+}
+
+.mobileMenu.open {
+  right: 0;
+}
+
+.mobileLink {
+  color: white;
+  font-size: 18px;
+  margin: 20px 0;
+  display: block;
+  text-align: center;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .navLinks {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .logoImage {
+    height: 50px;
+  }
+
+  .navbar {
+    padding: 0 20px;
+  }
+}
+
+.hamburger svg,
+.closeBtn svg {
+  font-size: 26px;
+}
+
+.hamburger svg:hover,
+.closeBtn svg:hover {
+  color: #DA7422;
+}
+
+.hamburger svg {
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover svg {
+  transform: scale(1.1);
+}
