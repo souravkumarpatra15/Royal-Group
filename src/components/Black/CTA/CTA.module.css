@@ -35,7 +35,7 @@
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 44px;
   font-weight: 700;
-  color: #1A1610;
+  color: #fdfdfc;
   margin-bottom: 32px;
   line-height: 1.15;
 }
@@ -63,7 +63,7 @@
   overflow: hidden;
   box-shadow:
     0px 4px 16px rgba(0, 0, 0, 0.09),
-    0px 1px 4px  rgba(0, 0, 0, 0.06);
+    0px 1px 4px rgba(0, 0, 0, 0.06);
   transition: color 0.35s ease, box-shadow 0.35s ease;
   z-index: 0;
 }
@@ -80,10 +80,62 @@
   z-index: -1;
 }
 
-.btn:hover::before { transform: translateX(0); }
+.btn:hover::before {
+  transform: translateX(0);
+}
+
 .btn:hover {
   color: #fff;
   box-shadow:
     0px 6px 22px rgba(218, 116, 34, 0.28),
-    0px 2px 6px  rgba(218, 116, 34, 0.14);
+    0px 2px 6px rgba(218, 116, 34, 0.14);
+}
+
+/* ───────── Tablet (≤ 992px) ───────── */
+@media (max-width: 992px) {
+
+  .section {
+    padding: 50px 40px 40px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .watermark {
+    right: 40px;
+  }
+
+  .watermarkImg {
+    width: 260px;
+  }
+}
+
+
+/* ───────── Mobile (≤ 576px) ───────── */
+@media (max-width: 576px) {
+
+  .heading {
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 24px;
+  }
+
+  .btn {
+    width: 140px;
+    padding: 12px 0;
+    font-size: 13px;
+  }
+
+  /* Move watermark to center background */
+  .watermark {
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    opacity: 0.05;
+  }
+
+  .watermarkImg {
+    width: 200px;
+  }
 }

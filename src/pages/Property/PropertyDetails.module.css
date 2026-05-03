@@ -1,90 +1,423 @@
 .page {
   background: #0c0c0c;
   color: #fff;
+  min-height: 100vh;
+}
+
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.amenityItemImage {
+  width: 22px !important;
+  height: 22px !important;
+  object-fit: contain !important;
+}
+
+.amenityItem span {
+  font-size: 13px;
+  color: #fff;
 }
 
 /* HERO */
 .hero {
   position: relative;
-  height: 750px;
+  height: 720px;
+  overflow: hidden;
 }
 
 .heroImg {
   width: 100%;
-  height: 50%;
+  height: 100%;
   object-fit: cover;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), #000);
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.35) 45%,
+      #0c0c0c 100%);
 }
 
 .heroContent {
   position: absolute;
-  bottom: 60px;
-  left: 80px;
+  left: 140px;
+  bottom: 220px;
+  z-index: 2;
 }
 
 .heroContent h1 {
-  font-size: 48px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px;
+  line-height: 0.95;
+  margin-bottom: 16px;
 }
 
 .heroContent span {
   color: #DA7422;
 }
 
+.heroContent p {
+  font-size: 14px;
+  max-width: 260px;
+  line-height: 1.6;
+}
+
 /* OVERVIEW */
 .overview {
-  display: flex;
-  gap: 60px;
-  padding: 80px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 120px;
+  align-items: center;
+  padding: 120px 90px 80px;
+}
+
+.overviewImg {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+}
+
+.overviewRight {
+  text-align: right;
+  max-width: 520px;
+  margin-left: auto;
+}
+
+.overviewRight h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  color: #DA7422;
+  margin-bottom: 24px;
+}
+
+.overviewRight p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
 }
 
 .stats {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 48px;
 }
 
 .stats h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
   color: #DA7422;
+  line-height: 1;
+}
+
+.stats span {
+  font-size: 11px;
+  color: #fff;
+}
+
+/* UNIT PLAN */
+.unit {
+  text-align: center;
+  padding: 80px 90px;
+}
+
+.unit h2,
+.gallery h2,
+.amenities h2,
+.more h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  color: #DA7422;
+  margin-bottom: 14px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin: 24px 0;
+  font-size: 13px;
+}
+
+.planImg {
+  width: 760px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* GALLERY */
+.gallery {
+  padding: 80px 90px;
+  text-align: center;
+}
+
 .galleryGrid {
-  display: flex;
-  gap: 20px;
-  padding: 60px;
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 18px;
+  padding: 0;
+  max-width: 1120px;
+  margin: 40px auto 0;
 }
 
 .big {
-  width: 70%;
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
 }
 
 .side {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  width: 100%;
+  display: grid;
+  gap: 18px;
+}
+
+.side img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
 }
 
 /* AMENITIES */
 .amenities {
-  display: flex;
-  padding: 80px;
-  gap: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+  padding: 100px 90px;
+}
+
+.amenities p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  max-width: 520px;
 }
 
 .amenityList {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 22px 40px;
+  margin-top: 34px;
+  color: #fff;
+  font-size: 13px;
 }
 
-/* MORE */
+.amenities img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+}
+
+/* MORE PROPERTIES */
+.more {
+  padding: 100px 90px 120px;
+}
+
+.more h2 {
+  color: #fff;
+}
+
+.more h2::first-letter {
+  color: #fff;
+}
+
 .cards {
-  display: flex;
-  gap: 20px;
-  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding: 40px 0 0;
+}
+
+.propertyCard {
+  background: #FFFBDB;
+  color: #111;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.propertyCard img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.propertyCard div {
+  padding: 16px;
+}
+
+.propertyCard h4 {
+  font-size: 16px;
+  color: #DA7422;
+  margin: 0;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+  .overview,
+  .amenities {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 70px 40px;
+  }
+
+  .overviewRight {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .side {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .page {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero,
+  .overview,
+  .unit,
+  .gallery,
+  .amenities {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero {
+    height: 420px;
+  }
+
+  .heroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .heroContent {
+    left: 22px;
+    bottom: 45px;
+  }
+
+  .heroContent h1 {
+    font-size: 38px;
+  }
+
+  .overview {
+    display: flex;
+    flex-direction: column;
+    padding: 0 22px 45px;
+    gap: 35px;
+  }
+
+  .overviewImg {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .overviewRight {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .overviewRight h3 {
+    font-size: 42px;
+  }
+
+  .overviewRight p {
+    font-size: 15px;
+    line-height: 1.8;
+    word-break: normal;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px 22px;
+  }
+
+  .stats h2 {
+    font-size: 42px;
+  }
+
+  .unit,
+  .gallery,
+  .amenities {
+    padding: 45px 22px;
+  }
+
+  .planImg,
+  .big {
+    width: 100%;
+    height: auto;
+  }
+
+  .galleryGrid {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .side {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .side img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+  }
+
+  .amenities {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .amenities>img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .amenityList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .amenityItemImage {
+    width: 22px !important;
+    height: 22px !important;
+    object-fit: contain !important;
+    flex-shrink: 0;
+  }
 }

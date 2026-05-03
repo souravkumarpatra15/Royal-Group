@@ -12,12 +12,20 @@ export default function Contact() {
 
       {/* CONTACT CARD */}
       <section className={styles.contactSection}>
+        {/* NEW TOP CONTENT */}
+        <div className={styles.topContent}>
+          <h1 className={styles.pageTitle}>Contact Us</h1>
+          <p className={styles.pageDesc}>
+            Have a question or need assistance? Reach out to SK Royal Group — our team is here to help you with property inquiries, project details, and any support you need.
+          </p>
+        </div>
+
         <div className={styles.contactCard}>
 
           {/* LEFT PANEL */}
           <div className={styles.left}>
             <h2 className={styles.headerTitle} style={{ fontSize: '35px' }}>Contact Information</h2>
-            <p style={{ marginTop: '-100px' }}>Say something to start a live chat!</p>
+            <p>Say something to start a live chat!</p>
 
             <div className={styles.info}>
               <a href="tel:+919830279622" className={styles.infoItem}>

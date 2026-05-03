@@ -133,8 +133,13 @@
 }
 
 /* Dividers between cells */
-.statsRow1 .stat:first-child { border-right: 1px solid rgba(200, 112, 10, 0.14); }
-.statsRow2 .stat:not(:last-child) { border-right: 1px solid rgba(200, 112, 10, 0.14); }
+.statsRow1 .stat:first-child {
+  border-right: 1px solid rgba(200, 112, 10, 0.14);
+}
+
+.statsRow2 .stat:not(:last-child) {
+  border-right: 1px solid rgba(200, 112, 10, 0.14);
+}
 
 /* Large number (row 1) */
 .statValueLg {
@@ -168,4 +173,118 @@
   color: #3A3020;
   line-height: 1.45;
   letter-spacing: 0.01em;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .scrollOuter {
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .imageCol {
+    min-height: 420px;
+  }
+
+  .slideImg {
+    object-fit: cover;
+  }
+
+  .textCol {
+    align-items: center;
+    padding: 55px 35px;
+  }
+
+  .heading {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .desc {
+    text-align: center;
+    max-width: 620px;
+    margin-bottom: 40px;
+  }
+
+  .statValueLg {
+    font-size: 58px;
+  }
+
+  .statValueMd {
+    font-size: 44px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .scrollOuter {
+    position: relative;
+    margin-left: 20px;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .imageCol {
+    min-height: 300px;
+  }
+
+  .textCol {
+    padding: 42px 20px;
+  }
+
+  .heading {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .desc {
+    font-size: 12.5px;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .statsRow1 {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  .statsRow2 {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .statsRow2 .stat:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid rgba(200, 112, 10, 0.14);
+    padding-bottom: 18px;
+  }
+
+  .statValueLg {
+    font-size: 42px;
+  }
+
+  .statValueMd {
+    font-size: 38px;
+  }
+
+  .statLabel {
+    font-size: 10.5px;
+  }
+
+  .dot {
+    width: 20px;
+  }
+
+  .dot.dotActive {
+    width: 28px;
+  }
 }

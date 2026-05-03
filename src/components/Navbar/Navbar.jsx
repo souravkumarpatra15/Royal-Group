@@ -41,9 +41,11 @@ export default function Navbar() {
       </ul>
 
       {/* Mobile Hamburger */}
-      <div className={styles.hamburger} onClick={() => setMenuOpen(true)}>
-        <FontAwesomeIcon icon={faBars} />
-      </div>
+      {!menuOpen && (
+        <div className={styles.hamburger} onClick={() => setMenuOpen(true)}>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
+      )}
 
       {/* Mobile Menu Overlay */}
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>

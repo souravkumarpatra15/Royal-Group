@@ -4,6 +4,26 @@
   flex-direction: column;
 }
 
+/* ── Top heading section ── */
+.topContent {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.pageTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  color: #d87321;
+  margin-bottom: 12px;
+}
+
+.pageDesc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+}
+
 .headerTitle {
   color: #151515;
 }
@@ -13,6 +33,8 @@
   padding: 100px 20px;
   display: flex;
   justify-content: center;
+  flex-direction: column;  
+  align-items: center;      
 }
 
 /* CARD */
@@ -23,7 +45,7 @@
   width: 100%;
   background: #ebe6c9;
   border-radius: 14px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
 
@@ -90,7 +112,8 @@
   gap: 40px;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   border: none;
   border-bottom: 1px solid #888;
@@ -143,8 +166,8 @@ textarea {
   transition: 0.3s;
 }
 
-.field input:focus + label,
-.field input:valid + label {
+.field input:focus+label,
+.field input:valid+label {
   top: -10px;
   font-size: 10px;
   color: #d87321;
@@ -174,7 +197,7 @@ textarea {
   background: #fff;
   color: #d87321;
   transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -204,4 +227,105 @@ textarea {
 .infoItem:hover {
   opacity: 0.8;
   transform: translateX(4px);
+}
+
+/* ───────── Tablet (≤ 992px) ───────── */
+@media (max-width: 992px) {
+
+  .pageTitle {
+    font-size: 32px;
+  }
+
+  .contactCard {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .left {
+    border-radius: 14px 14px 0 0;
+    padding: 30px 25px;
+  }
+
+  .right {
+    padding: 40px 25px;
+  }
+
+  .row {
+    gap: 20px;
+  }
+}
+
+
+/* ───────── Mobile (≤ 576px) ───────── */
+@media (max-width: 576px) {
+
+  .topContent {
+    margin-bottom: 25px;
+  }
+
+  .pageTitle {
+    font-size: 26px;
+  }
+
+  .pageDesc {
+    font-size: 13px;
+  }
+
+  .contactSection {
+    padding: 80px 16px;
+  }
+
+  .contactCard {
+    border-radius: 12px;
+  }
+
+  /* ORDER CONTROL */
+  .left {
+    order: 2;
+    /* Contact info comes AFTER heading */
+  }
+
+  .right {
+    order: 3;
+    /* Form last */
+  }
+
+  /* If you add a top heading section later */
+  .leftTop {
+    order: 1;
+  }
+
+  /* Stack fields */
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Button full width */
+  .btn {
+    align-self: stretch;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Typography adjustments */
+  .headerTitle {
+    font-size: 24px !important;
+  }
+
+  .infoItem {
+    font-size: 12.5px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
 }

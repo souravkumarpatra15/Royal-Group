@@ -2,8 +2,12 @@ import styles from "./PropertyDetails.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import CTA from "../../components/Black/CTA/CTA";
 import Footer from "../../components/Black/Footer/Footer";
+import Projects from "../../components/Projects/ProjectsBlack";
 import banner from "../../assets/banner1.png";
 import img from "../../assets/Rectangle 33.png";
+import img2 from "../../assets/Rectangle 77.png";
+import img3 from "../../assets/Rectangle 70.png";
+import shieldIcon from "../../assets/Vector.svg";
 
 export default function PropertyDetails() {
   return (
@@ -31,8 +35,7 @@ export default function PropertyDetails() {
         <div className={styles.overviewRight}>
           <h3>Overview</h3>
           <p>
-            Premium residential apartments designed with comfort and modern
-            lifestyle in mind.
+            Potter ipsum wand elf parchment wingardium. Prophecies blotts ickle dirigible witch padma remember juice us norwegian. Quaffle ollivanders flying hoops bezoar remembrall cup floating. Hats poltergeist prongs grayback drills cutting hagrid spine knew heir.
           </p>
 
           <div className={styles.stats}>
@@ -46,20 +49,22 @@ export default function PropertyDetails() {
       {/* UNIT PLAN */}
       <section className={styles.unit}>
         <h2>Unit Plan</h2>
+        <p>Explore our diverse range of unit plans designed to suit your lifestyle.</p>
         <div className={styles.tabs}>
           <span>Option A</span>
           <span>Option B</span>
           <span>Option C</span>
         </div>
-        <img src={img} className={styles.planImg} />
+        <img src={img2} className={styles.planImg} />
       </section>
 
       {/* GALLERY */}
       <section className={styles.gallery}>
         <h2>Gallery</h2>
+        <p>Take a visual tour of our luxurious amenities and well-designed spaces.</p>
 
         <div className={styles.galleryGrid}>
-          <img src={img} className={styles.big} />
+          <img src={img3} className={styles.big} />
           <div className={styles.side}>
             <img src={img} />
             <img src={img} />
@@ -72,11 +77,14 @@ export default function PropertyDetails() {
       <section className={styles.amenities}>
         <div>
           <h2>Our Amenities</h2>
-          <p>Premium facilities designed for your comfort.</p>
+          <p>Premium facilities designed for your comfort. SK Royal Estates </p>
 
           <div className={styles.amenityList}>
             {Array(8).fill("Safety and Security").map((a, i) => (
-              <div key={i}>🛡 {a}</div>
+              <div key={i} className={styles.amenityItem}>
+                <img src={shieldIcon} className={styles.amenityItemImage} alt="icon" />
+                <span>{a}</span>
+              </div>
             ))}
           </div>
         </div>
@@ -84,21 +92,7 @@ export default function PropertyDetails() {
         <img src={img} />
       </section>
 
-      {/* MORE PROPERTIES */}
-      <section className={styles.more}>
-        <h2>More Properties From Us</h2>
-
-        <div className={styles.cards}>
-          {[1,2,3].map(i => (
-            <div key={i} className={styles.propertyCard}>
-              <img src={img} />
-              <div>
-                <h4>Apartment {i}</h4>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Projects />
 
       <CTA />
       <Footer />
